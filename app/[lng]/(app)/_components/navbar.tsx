@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container mx-auto flex h-full max-w-7xl items-center justify-between border-b">
         <div className="flex items-center gap-4">
           <h1 className="text-xl text-muted-foreground">OnlyCourses</h1>
-          <div className="flex items-center gap-3 border-1 pl-2">
+          <div className="flex items-center gap-3 border-b pl-2">
             {navLinks.map((nav) => (
               <Link
                 href={`/${nav.route}`}
