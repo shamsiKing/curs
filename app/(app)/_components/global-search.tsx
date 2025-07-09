@@ -4,7 +4,7 @@ import React from "react";
 
 const GlobalSearch = () => {
   return (
-    <Button size={"icon"} variant={"outline"}>
+    <Button size={"icon"} variant={"ghost"}>
       <Search />
     </Button>
   );
