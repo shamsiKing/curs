@@ -4,7 +4,6 @@ import React from "react";
 import GlobalSearch from "./global-search";
 import LanguageMenu from "@/components/shared/language-menu";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart } from "lucide-react";
 import ModeToggle from "@/components/shared/mode-toggle";
 
 const Navbar = () => {
@@ -29,9 +28,6 @@ const Navbar = () => {
           <div className="flex items-center gap-2 border-r pr-3">
             <GlobalSearch />
             <LanguageMenu />
-            <Button size="icon" variant={"ghost"}>
-              <ShoppingCart />
-            </Button>{" "}
             <ModeToggle />
           </div>
           <Button variant={"ghost"} size={"lg"} className="rounded-full">
