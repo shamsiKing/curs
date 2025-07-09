@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils";
 
 const LanguageMenu = () => {
   const { lng } = useParams();
-  console.log(lng);
 
   return (
     <DropdownMenu>
@@ -31,7 +30,12 @@ const LanguageMenu = () => {
         <DropdownMenuGroup>
           {lngs.map((item) => (
             <Link href={item.route} key={item.route}>
-              <DropdownMenuItem className={cn("cursor-pointer")}>
+              <DropdownMenuItem
+                className={cn(
+                  "cursor-pointer",
+                  lng === item.route && "bg-secondary"
+                )}
+              >
                 <Image
                   src={`/assets/${item.route}.jpg`}
                   alt={item.label}
