@@ -1,9 +1,13 @@
-import { Translation } from "@/i18n/server";
-import { lngParams } from "@/type";
+"use client";
+
+import { useTranslation } from "@/i18n/client";
+import { useParams } from "next/navigation";
 import React from "react";
 
-async function HomePage({ params: { lng } }: lngParams) {
-  const { t } = await Translation(lng, "home");
+function HomePage() {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string);
+
   return (
     <div className="mt-24 font-spaceGrotesk-mono font-medium">{t("home")}</div>
   );
