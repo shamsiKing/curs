@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { languages } from "@/i18n/settings";
 import { dir } from "i18next";
 import { ChildProps } from "@/type";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Localization } from "@/lib/utils";
 
 const geistSans = Geist({
   weight: ["300", "400", "500", "400", "500", "600", "700", "800", "900"],
@@ -32,6 +34,7 @@ export async function generateStaticParams() {
 }
 
 export default function RootLayout({ children, params: { lng } }: Props) {
+  const local = Localization(lng);
   return (
     <html lang="en" dir={dir(lng)} suppressHydrationWarning>
       <body
@@ -43,7 +46,7 @@ export default function RootLayout({ children, params: { lng } }: Props) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ClerkProvider localization={local}>{children}</ClerkProvider>
         </ThemeProvider>
       </body>
     </html>

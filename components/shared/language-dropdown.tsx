@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const LanguageMenu = () => {
+const LanguageDropdown = () => {
   const { lng } = useParams();
 
   return (
@@ -54,4 +54,4 @@ const LanguageMenu = () => {
   );
 };
 
-export default LanguageMenu;
+export default LanguageDropdown;
