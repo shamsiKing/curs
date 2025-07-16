@@ -16,7 +16,6 @@ import {
 } from "@clerk/nextjs";
 
 const Navbar = () => {
-  
   return (
     <div className="fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl">
       <div className="container mx-auto flex h-full max-w-7xl items-center justify-between border-b">
