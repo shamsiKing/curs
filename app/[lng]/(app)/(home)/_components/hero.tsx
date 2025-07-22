@@ -10,12 +10,10 @@ import { companies } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
-import { useTranslation } from "@/hooks/use-translate";
-import { useParams } from "next/navigation";
+import Usetranslate from "@/hooks/useTranslate";
 
 function Hero() {
-  const { lng } = useParams();
-  const { t } = useTranslation(lng as string);
+  const t = Usetranslate();
 
   return (
     <>
