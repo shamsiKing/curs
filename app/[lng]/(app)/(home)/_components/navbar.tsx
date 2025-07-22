@@ -32,7 +32,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-        </div>{" "}
+        </div>
         <div className="flex items-center gap-2 max-md:hidden">
           <div className="flex items-center gap-2 border-r pr-3">
             <GlobalSearch />
